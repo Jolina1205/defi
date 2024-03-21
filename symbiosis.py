@@ -134,7 +134,7 @@ while True:
 print("All records fetched for March 2024.")
 print(all_records_df)
 
-# Save the filtered DataFrame to an Excel file with a timestamp
-with pd.ExcelWriter('march_2024.xlsx') as writer:
-    all_records_df.to_excel(writer, sheet_name='symbiosis', index=False)
-print("symbiosis data for March 2024 saved to march_2024.xlsx")
+# Save the filtered DataFrame to a CSV file
+
+all_records_df.to_csv('march_2024.csv', index=False)
+print("symbiosis data for March 2024 saved to march_2024.csv")

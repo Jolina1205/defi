@@ -64,7 +64,6 @@ print("All orders fetched.")
 # print(all_orders_df)
 
 
-with pd.ExcelWriter('deexplorer.xlsx') as writer:
-    # Write the first DataFrame to the first sheet
-    all_orders_df.to_excel(writer, sheet_name='deexplorer', index=False)
-print("deexplorer data saved to deexplorer.xlsx")
+# Save the filtered DataFrame to a CSV file
+all_orders_df.to_csv('de_exp.csv', index=False)
+print("deexplorer data saved to de_exp.csv")
